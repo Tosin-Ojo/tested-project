@@ -1,0 +1,14 @@
+.alert {
+  color: white;
+  font-weight: 600;
+  width: fit-content;
+  padding: 10px 20px;
+  position: fixed;
+  min-width: 200px;
+  top: -70px;
+  right: 10px;
+  text-align: center;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  transition: all 500ms linear;
+}

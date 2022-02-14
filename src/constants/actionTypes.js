@@ -1,0 +1,9 @@
+export const FETCH_PRODUCTS = "FETCH_PRODUCTS";
+
+export const ADD_TO_BASKET = "ADD_TO_BASKET";
+export const REMOVE_FROM_BASKET = "REMOVE_FROM_BASKET";
+export const UPDATE_QUANTITY = "UPDATE_QUANTITY";
+export const CLEAR_BASKET = "CLEAR_BASKET";
+
+export const SHOW_MESSAGE = "SHOW_MESSAGE";
+export const HIDE_MESSAGE = "HIDE_MESSAGE";
