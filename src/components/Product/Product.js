@@ -17,12 +17,19 @@ const Product = ({ product, basket }) => {
   };
 
   return (
-    <div className="product">
+    <div className="product" data-testid={`product-${product.sku}`}>
       <div>{product.name}</div>
       <div>{product.description}</div>
       <div>{formatCurrency(product.price)}</div>
-      <button onClick={handleAddToBasket}>Add to Basket</button>
-      <button onClick={handleRemoveFromBasket}>Remove from Basket</button>
+      <button data-testid={`addBtn-${product.sku}`} onClick={handleAddToBasket}>
+        Add to Basket
+      </button>
+      <button
+        data-testid={`removeBtn-${product.sku}`}
+        onClick={handleRemoveFromBasket}
+      >
+        Remove from Basket
+      </button>
     </div>
   );
 };

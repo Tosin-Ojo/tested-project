@@ -7,8 +7,10 @@ const Header = ({ basket, checkout }) => {
   return (
     <div className="header">
       <Link to="/checkout">
-        Basket {basketItems(basket) > 1 ? "items" : "Item"}:{" "}
-        {basketItems(basket)}
+        Basket{" "}
+        {basketItems(basket) > 1
+          ? `items: ${basketItems(basket)}`
+          : `Item: ${basketItems(basket)}`}
       </Link>
       {!checkout && (
         <Link to="/checkout">

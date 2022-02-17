@@ -27,9 +27,16 @@ const CheckoutProduct = ({ product, basket }) => {
   };
 
   return (
-    <div className="checkoutProduct">
+    <div
+      data-testid={`checkoutProduct-${product.sku}`}
+      className="checkoutProduct"
+    >
       <div>{product.name}</div>
-      <select value={quantity} onChange={handleChange}>
+      <select
+        data-testid={`quantity-${product.sku}`}
+        value={quantity}
+        onChange={handleChange}
+      >
         {quantityArray.map((quantity) => (
           <option value={quantity} key={quantity}>
             {quantity}
@@ -38,7 +45,12 @@ const CheckoutProduct = ({ product, basket }) => {
       </select>
       <div>{formatCurrency(product.price)}</div>
       <div>{formatCurrency(product.price * product.quantity)}</div>
-      <button onClick={handleRemoveFromBasket}>Remove All</button>
+      <button
+        data-testid={`removeAllBtn-${product.sku}`}
+        onClick={handleRemoveFromBasket}
+      >
+        Remove All
+      </button>
     </div>
   );
 };

@@ -23,7 +23,11 @@ const Alert = () => {
   }, [alert, dispatch]);
 
   return (
-    <div style={alert.display ? style : {}} className="alert">
+    <div
+      data-testid="alert"
+      style={alert.display ? style : {}}
+      className="alert"
+    >
       {alert.message}
     </div>
   );

@@ -59,7 +59,12 @@ const Checkout = () => {
           <div className="checkout__input">
             <label>
               Input Your Card Details
-              <input type="text" value={card} onChange={handleChange} />
+              <input
+                type="text"
+                value={card}
+                onChange={handleChange}
+                placeholder="Enter card details"
+              />
             </label>
             {!valid && (
               <span className="checkout__error">Invalid card details</span>
@@ -73,7 +78,7 @@ const Checkout = () => {
           <button
             style={{ opacity: !valid || card === "" ? "0.5" : "" }}
             onClick={handleCheckout}
-            disabled={!valid}
+            disabled={!valid || card === ""}
           >
             Checkout
             {loading && <div className="loader__sm"></div>}

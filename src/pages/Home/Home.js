@@ -32,7 +32,7 @@ const Home = () => {
     <div className="home">
       <Header basket={basket} />
       {loading ? (
-        products.length < 1 && <div className="loader__lg"></div>
+        products.length < 1 && <div data-testid="loader__lg" className="loader__lg"></div>
       ) : (
         <>
           {products.length > 0 && (
